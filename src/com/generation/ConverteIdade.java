@@ -21,7 +21,7 @@ public class ConverteIdade {
 		
 		int diasVividos = (anos*365) + (meses*30) + dias;
 		
-		System.out.println("Você viveu o total de " + diasVividos + " dias28");
+		System.out.println("Você viveu o total de " + diasVividos + " dias");
 		
 		entrada.close();
 
