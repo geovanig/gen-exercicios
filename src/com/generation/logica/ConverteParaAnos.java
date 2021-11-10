@@ -1,4 +1,4 @@
-package com.generation;
+package com.generation.logica;
 
 //2. Faça um sistema que leia a idade de uma pessoa expressa em dias 
 //e mostre-a expressa em anos, meses e dias. 

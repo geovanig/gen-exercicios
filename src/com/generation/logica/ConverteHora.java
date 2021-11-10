@@ -1,4 +1,4 @@
-package com.generation;
+package com.generation.logica;
 
 import java.util.Scanner;
 
