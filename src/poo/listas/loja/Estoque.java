@@ -1,6 +1,7 @@
 package poo.listas.loja;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Estoque {
@@ -49,18 +50,32 @@ public class Estoque {
 	}
 	
 	public void removerItem() {
-		System.out.println("Digite o nome do item que deseja remover");
 		String item = leitor.nextLine();
-		if(listaItens.contains(item)) {
-			
-		}
+		listaItens.remove(0);
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(item, leitor, listaItens, valor);
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Estoque other = (Estoque) obj;
+		return Objects.equals(item, other.item) && Objects.equals(leitor, other.leitor)
+				&& Objects.equals(listaItens, other.listaItens)
+				&& Double.doubleToLongBits(valor) == Double.doubleToLongBits(other.valor);
 	}
 	
 	@Override
 	public String toString() {
 		return item + " - R$" + valor;
 	}
-	
-	
 
 }
